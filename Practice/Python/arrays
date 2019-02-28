@@ -1,0 +1,35 @@
+#The NumPy (Numeric Python) package helps us manipulate large arrays and matrices of numeric data.
+#To use the NumPy module, we need to import it using:
+#Task
+#You are given a space separated list of numbers. 
+#Your task is to print a reversed NumPy array with the element type float.
+#Input Format
+#  A single line of input containing space separated numbers.
+#Output Format
+#  Print the reverse NumPy array with type float.
+
+import numpy
+
+def arrays(arr):
+    # complete this function
+    # use numpy.array
+    a = numpy.array(arr,float)
+    
+    positif =[]
+    negatif =[]
+
+    for x in a:
+        if x>=0:
+            positif.append(x)
+        else:
+            negatif.append(x)
+    
+    positif = sorted(positif, reverse=True)
+    negatif = sorted(negatif,)
+
+    res = negatif + positif  
+    res = numpy.array(res,float)
+    return res
+
+
+arr = input().strip().split(' ')
